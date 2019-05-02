@@ -5,15 +5,13 @@ import com.intuit.coding_interview.petclinic.pet.Pet;
 import com.intuit.coding_interview.petclinic.vet.Vet;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Data
 @Entity
 public class Appointment {
+    @Id @GeneratedValue long id;
     private Date start;
     private Date end;
 
