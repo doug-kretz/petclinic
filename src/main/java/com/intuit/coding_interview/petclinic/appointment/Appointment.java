@@ -23,6 +23,8 @@ public class Appointment {
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
+    private Appointment(){} //JPA Req
+
     public Appointment(Date start, Date end, Vet vet, Pet pet) {
         this.start = start;
         this.end = end;
