@@ -15,7 +15,7 @@ public class Appointment {
     private Date start;
     private Date end;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "vet_id")
     private Vet vet;
 
