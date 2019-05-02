@@ -5,11 +5,13 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Date;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.sql.Date;
 import java.util.List;
 
-@Entity
 @Data
+@Entity
 public class Pet {
 
     @Id
@@ -18,7 +20,6 @@ public class Pet {
 
     private String firstName;
     private String lastName;
-    private List<Date> appointments;
 
     private Pet(){} //JPA nonsense
 
