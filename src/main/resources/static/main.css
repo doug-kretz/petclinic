@@ -1,0 +1,29 @@
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px;
+}
+
+.primaryButton {
+    background: green;
+}
+
+.mainNavLink {
+    border-bottom: 3px dashed blueviolet;
+    margin: 8px;
+    display: inline;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.mainNavLink:hover {
+    border-bottom: 3px solid blueviolet;
+    margin: 8px;
+    display: inline;
+    padding-right: 6px;
+    padding-left: 6px;
+}
