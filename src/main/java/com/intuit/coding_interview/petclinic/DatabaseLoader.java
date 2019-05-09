@@ -10,6 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Component
 public class DatabaseLoader implements CommandLineRunner {
@@ -28,6 +29,6 @@ public class DatabaseLoader implements CommandLineRunner {
         petRepository.save( new Pet("Vin", "Kretz"));
         petRepository.save( new Pet("Mazzi", "Kretz"));
 
-        appointmentRepository.save(new Appointment(Instant.now().toEpochMilli(), Instant.now().plusSeconds(60).toEpochMilli(), new Vet("George", "Washington"), new Pet("Vins", "Kretz")));
+        appointmentRepository.save(new Appointment(LocalDateTime.of(2019,5,8,9,0), LocalDateTime.of(2019, 5, 8, 10, 0), new Vet("George", "Washington"), new Pet("Vins", "Kretz")));
     }
 }

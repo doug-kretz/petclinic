@@ -6,14 +6,14 @@ import com.intuit.coding_interview.petclinic.vet.Vet;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
 public class Appointment {
     @Id @GeneratedValue long id;
-    private long start;
-    private long end;
+    private LocalDateTime start;
+    private LocalDateTime end;
 
     @ManyToOne( cascade = CascadeType.PERSIST)
     @JoinColumn(name = "vet_id")
@@ -25,7 +25,7 @@ public class Appointment {
 
     private Appointment(){} //JPA Req
 
-    public Appointment(long start, long end, Vet vet, Pet pet) {
+    public Appointment(LocalDateTime start, LocalDateTime end, Vet vet, Pet pet) {
         this.start = start;
         this.end = end;
         this.vet = vet;
