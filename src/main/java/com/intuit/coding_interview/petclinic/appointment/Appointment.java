@@ -12,20 +12,20 @@ import java.sql.Date;
 @Entity
 public class Appointment {
     @Id @GeneratedValue long id;
-    private Date start;
-    private Date end;
+    private long start;
+    private long end;
 
-    @ManyToOne
+    @ManyToOne( cascade = CascadeType.PERSIST)
     @JoinColumn(name = "vet_id")
     private Vet vet;
 
-    @ManyToOne
+    @ManyToOne( cascade = CascadeType.PERSIST)
     @JoinColumn(name = "pet_id")
     private Pet pet;
 
     private Appointment(){} //JPA Req
 
-    public Appointment(Date start, Date end, Vet vet, Pet pet) {
+    public Appointment(long start, long end, Vet vet, Pet pet) {
         this.start = start;
         this.end = end;
         this.vet = vet;

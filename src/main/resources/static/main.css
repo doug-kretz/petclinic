@@ -27,3 +27,16 @@ body {
     padding-right: 6px;
     padding-left: 6px;
 }
+
+.btn {
+    border: none;
+    width: auto;
+    height: 30px;
+}
+.btn-primary {
+    font-weight: 600;
+    background: turquoise;
+    height: 80px;
+    color: black;
+    margin-top: 50px;
+}
