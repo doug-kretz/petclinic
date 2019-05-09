@@ -1,5 +1,6 @@
-const React = require("react");
-const ReactDOM = require("react-dom");
+import React from "react";
+import ReactDOM from "react-dom";
+import NavBar from "./NavBar"
 
 class App extends React.Component {
     constructor(props) {
@@ -9,11 +10,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-            <NavBar>
-                <span> Vets </span>
-                <span> Pets </span>
-                <span> Appointments </span>
-            </NavBar>
+            <NavBar/>
             <PrimaryButton>
                 Schedule an Appointment
             </PrimaryButton>
@@ -33,19 +30,6 @@ const PrimaryButton = (props) => (
         <Button className="btn-primary" onClick={props.onClick}>
             {props.children}
         </Button>
-);
-const NavBar = (props) => (
-    <div className="mainNav">
-        {React.Children.map(props.children, child => (
-            <NavLink> {child} </NavLink>
-        ))}
-    </div>
-);
-
-const NavLink = props => (
-    <div className="mainNavLink">
-        {props.children}
-    </div>
 );
 
 ReactDOM.render(
