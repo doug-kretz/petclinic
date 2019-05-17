@@ -19,7 +19,19 @@ module.exports = {
                     options: {
                         presets: ["@babel/preset-env", "@babel/preset-react"]
                     }
-                }]
+                }],
+            },
+            {
+                test: /\.(css|scss|sass)$/i,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)$/,
+                loaders: ['file-loader']
+            },
+            {
+                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+                loaders: ['file-loader']
             }
         ]
     }

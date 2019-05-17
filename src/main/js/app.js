@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter as Router, Link} from "react-router-dom"
-import NavBar from "./NavBar"
-
+import {BrowserRouter as Router, Link} from "react-router-dom";
+import MainNavBar from "./MainNavBar";
+import "typeface-roboto";
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +12,7 @@ class App extends React.Component {
         return (
             <div>
                 <Router>
-                    <NavBar/>
+                    <MainNavBar/>
                     <Link to={"/Appointments"}>
                     <PrimaryButton>
                         Schedule an Appointment
